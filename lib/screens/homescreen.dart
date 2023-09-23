@@ -1,5 +1,8 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:team319website/screens/about_us.dart';
+import 'package:get/get.dart';
+import 'package:team319website/screens/mission.dart';
+import 'package:team319website/screens/product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   String eximage =
       "https://m.media-amazon.com/images/I/51H0SYt5a1L._SS284_.jpg";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            title(),
-            MenuBar(),
+            title(context),
+            menuBar(context),
             Container(
               height: 250,
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
@@ -32,36 +36,46 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            brief_product_introduce(),
+            briefProductIntroduce(),
+            const SizedBox(
+              height: 60,
+            ),
+            ourStory()
           ],
         ),
       ),
     );
   }
 
-  Container title() {
+  Container title(BuildContext context) {
     return Container(
-        height: 70,
-        decoration: const BoxDecoration(
-          color: Colors.black,
-        ),
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
+      height: 70,
+      decoration: const BoxDecoration(
+        color: Colors.black,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextButton(
+            onPressed: () {
+              Get.off(const HomeScreen());
+            },
+            child: const Text(
               "Team319",
               style: TextStyle(
                 fontSize: 30,
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
               ),
-            )
-          ],
-        ));
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
-Container MenuBar() {
+Container menuBar(BuildContext context) {
   return Container(
     height: 40,
     decoration: const BoxDecoration(
@@ -74,7 +88,9 @@ Container MenuBar() {
           width: 30,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(const AboutUs());
+          },
           child: const Text(
             "About Us",
             style: TextStyle(
@@ -85,7 +101,9 @@ Container MenuBar() {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(const Product());
+          },
           child: const Text(
             "Product",
             style: TextStyle(
@@ -96,7 +114,9 @@ Container MenuBar() {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(const Mission());
+          },
           child: const Text(
             "Our Mission",
             style: TextStyle(
@@ -142,7 +162,7 @@ Column slogan() {
   );
 }
 
-Column brief_product_introduce() {
+Column briefProductIntroduce() {
   return Column(
     children: [
       const Text(
@@ -175,23 +195,24 @@ Column brief_product_introduce() {
         ),
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(
             width: 200,
           ),
           Column(
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 100),
               Container(
                 height: 300,
                 width: 350,
                 decoration: BoxDecoration(
-                  color: Colors.black45,
+                  color: Colors.black12,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: const Text(
-                  "Hello, World!",
+                  "근데 이미 특허가 있어서",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 50,
                   ),
@@ -202,7 +223,7 @@ Column brief_product_introduce() {
           const Column(
             children: [
               SizedBox(
-                width: 50,
+                width: 15,
               ),
             ],
           ),
@@ -212,10 +233,11 @@ Column brief_product_introduce() {
                 height: 300,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black12,
                     borderRadius: BorderRadius.circular(30)),
                 child: const Text(
-                  "He11o, Wor1d!",
+                  "조진것같아요",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 50,
                   ),
@@ -228,6 +250,20 @@ Column brief_product_introduce() {
           ),
         ],
       ),
+    ],
+  );
+}
+
+Column ourStory() {
+  return const Column(
+    children: [
+      Text(
+        "Our Story",
+        style: TextStyle(
+          fontSize: 56,
+          fontWeight: FontWeight.w700,
+        ),
+      )
     ],
   );
 }
