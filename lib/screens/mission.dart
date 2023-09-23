@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team319website/screens/homescreen.dart';
-import 'package:get/get.dart';
-import 'package:team319website/screens/about_us.dart';
-import 'package:team319website/screens/product.dart';
+import 'package:team319website/screens/screen_components.dart';
 
 class Mission extends StatelessWidget {
   const Mission({super.key});
@@ -15,96 +12,11 @@ class Mission extends StatelessWidget {
         child: Column(
           children: [
             title(context),
-            menuBar(context),
+            menuBar(context, FontWeight.w100, FontWeight.w100, FontWeight.w200),
+            banner("Our Mission", "Team319가 그리는 미래"),
           ],
         ),
       ),
     );
   }
-}
-
-Container title(BuildContext context) {
-  return Container(
-    height: 60,
-    decoration: const BoxDecoration(
-      color: Colors.black,
-    ),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        TextButton(
-          onPressed: () {
-            Get.to(const HomeScreen());
-          },
-          child: const Text(
-            "Team319",
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
-Container menuBar(BuildContext context) {
-  return Container(
-    height: 40,
-    decoration: const BoxDecoration(
-      color: Colors.black54,
-    ),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const SizedBox(
-          width: 30,
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const AboutUs());
-          },
-          child: const Text(
-            "About Us",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const Product());
-          },
-          child: const Text(
-            "Product",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const Mission());
-          },
-          child: const Text(
-            "Our Mission",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        const SizedBox(
-          width: 30,
-        ),
-      ],
-    ),
-  );
 }

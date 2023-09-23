@@ -1,136 +1,71 @@
 import 'package:flutter/material.dart';
-import 'package:team319website/screens/homescreen.dart';
-import 'package:get/get.dart';
-import 'package:team319website/screens/mission.dart';
-import 'package:team319website/screens/product.dart';
+import 'package:team319website/screens/screen_components.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //Define the gradient colors
+    final gradientColors = [Colors.black, Colors.black12];
+
+    //Create a gradient shader
+    final Shader linearGradient = LinearGradient(
+      colors: gradientColors,
+    ).createShader(const Rect.fromLTWH(0, 0, 300, 50)); //Adjust Rect as needed
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
             title(context),
-            menuBar(context),
-            const SizedBox(
-              height: 50,
-            ),
-            Column(
+            menuBar(context, FontWeight.w200, FontWeight.w100, FontWeight.w100),
+            banner("About Us", "지속 가능한 내일에 기여하는 Team319"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black54,
-                      ),
-                      child: const Text(
-                        "About Us",
-                        textAlign: TextAlign.center,
+                SizedBox(
+                  height: 250,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "우리의 자연이",
+                        textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 54,
+                          fontSize: 44,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.green,
                         ),
                       ),
-                    )
-                  ],
-                )
+                      ShaderMask(
+                        shaderCallback: (Rect bounds) {
+                          return linearGradient;
+                        },
+                        child: const Text(
+                          "흑백사진으로 기억되지 않도록",
+                          style: TextStyle(
+                            fontSize: 44,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                const SizedBox(
+                  width: 120,
+                ), //여기사진
               ],
-            )
+            ),
           ],
         ),
       ),
     );
   }
-}
-
-Container title(BuildContext context) {
-  return Container(
-    height: 60,
-    decoration: const BoxDecoration(
-      color: Colors.black,
-    ),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        TextButton(
-          onPressed: () {
-            Get.to(const HomeScreen());
-          },
-          child: const Text(
-            "Team319",
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
-Container menuBar(BuildContext context) {
-  return Container(
-    height: 40,
-    decoration: const BoxDecoration(
-      color: Colors.black54,
-    ),
-    child: Row(
-      //Row 화면 좌우로 넓게 만들어놓기 미래의 나야 부탁해
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const SizedBox(
-          width: 30,
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const AboutUs());
-          },
-          child: const Text(
-            "About Us",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const Product());
-          },
-          child: const Text(
-            "Product",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Get.to(const Mission());
-          },
-          child: const Text(
-            "Our Mission",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
-        const SizedBox(
-          width: 30,
-        ),
-      ],
-    ),
-  );
 }
