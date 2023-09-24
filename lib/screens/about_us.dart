@@ -25,7 +25,13 @@ class AboutUs extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/forest-ex1/jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   height: 250,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,13 +51,23 @@ class AboutUs extends StatelessWidget {
                           return linearGradient;
                         },
                         child: const Text(
-                          "흑백사진으로 기억되지 않도록",
+                          "흑백사진으로 기억되지 않도록,",
                           style: TextStyle(
                             fontSize: 44,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
                       ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        "Team319는 지속 가능한 내일에 기여하기 위해 노력합니다.",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )
                     ],
                   ),
                 ),
