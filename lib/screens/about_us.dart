@@ -3,6 +3,8 @@ import 'package:team319website/screens/screen_components.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
+  final String forest =
+      "https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828_1280.jpg";
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +27,7 @@ class AboutUs extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/forest-ex1/jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                SizedBox(
                   height: 250,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,11 +68,15 @@ class AboutUs extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 40,
+                  width: 100,
                 ),
-                const SizedBox(
-                  width: 120,
-                ), //여기사진
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: SizedBox(
+                    width: 500,
+                    child: Image.network(forest),
+                  ),
+                )
               ],
             ),
           ],

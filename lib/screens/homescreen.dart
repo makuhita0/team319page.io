@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           TextButton(
             onPressed: () {
-              Get.to(const AboutUs());
+              Get.to(AboutUs());
             },
             onHover: (hover) {},
             child: const Text(
