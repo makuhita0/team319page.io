@@ -22,7 +22,7 @@ class Product extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black26),
                 color: const Color.fromARGB(255, 241, 241, 241),
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(50),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
