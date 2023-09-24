@@ -25,9 +25,22 @@ class Product extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.network(eximage),
-                  const Text("SSAC"),
+                  SizedBox(
+                    width: 160,
+                    child: Image.network(
+                      eximage,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Text(
+                    "SSAC",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
                 ],
               ),
             ),
