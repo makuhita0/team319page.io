@@ -114,7 +114,7 @@ class AboutUs extends StatelessWidget {
                 const SizedBox(
                   width: 390,
                   child: Text(
-                    "2023년에 시작한 친환경 제품 스타트업입니다.\n\n한국디지털미디어고등학교에 다니던,\n기숙사를 같이 쓰던 학생 네명이 모여 시작했습니다.\n\n우리 Team319는 레저용 제품에 환경을 오염시키는\n제품이 많이 있는 것을 알게되었고\n그 문제를 해결하기 위해 친환경 수저 \"SSAC\"을 개발,\n판매 예정에 있습니다.",
+                    "2023년에 시작한 친환경 제품 스타트업입니다.\n\n한국디지털미디어고등학교에 다니던,\n기숙사를 같이 쓰던 학생 네명이 모여 시작했습니다.\n\n우리 Team319는 레저용 제품에 환경을 오염시키는\n제품이 많이 있는 것을 느끼게 되었고\n그 문제를 해결하기 위해 친환경 수저 \"SSAC\"을 개발,\n판매 예정에 있습니다.",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
@@ -172,7 +172,7 @@ class AboutUs extends StatelessWidget {
             memberInfo(
                 "김도현", "기획 / 디자인 담당", "Dohyeon Kim", "makuhita0@dimigo.hs.kr"),
             memberInfo(
-                "김율민", "최고 녹색 책임", "Yulmin Kim", "mazeboyy@dimigo.hs.kr"),
+                "김율민", "환경 / 과학기술 담당", "Yulmin Kim", "mazeboyy@dimigo.hs.kr"),
             const SizedBox(
               height: 100,
             ),
