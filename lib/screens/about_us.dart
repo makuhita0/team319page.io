@@ -10,9 +10,7 @@ class AboutUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heightRatio = MediaQuery.of(context).size.height / 1080;
     double widthRatio = MediaQuery.of(context).size.width / 1920;
-    bool isLandscape = widthRatio > heightRatio;
     //Define the gradient colors
     final gradientColors = [Colors.black, Colors.black12];
 
@@ -88,7 +86,7 @@ class AboutUs extends StatelessWidget {
               height: 100,
             ),
             Container(
-              width: 500 * widthRatio,
+              width: 550 * widthRatio,
               height: 90,
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -115,13 +113,13 @@ class AboutUs extends StatelessWidget {
                   width: 200 * widthRatio,
                 ),
                 SizedBox(
-                  width: 500 * widthRatio,
+                  width: 550 * widthRatio,
                   child: Text(
                     "2023년에 시작한 친환경 제품 스타트업입니다.\n\n한국디지털미디어고등학교에 다니던,\n기숙사를 같이 쓰던 학생 네명이 모여 시작했습니다.\n\n우리 Team319는 레저용 제품에 환경을 오염시키는\n제품이 많이 있는 것을 느끼게 되었고\n그 문제를 해결하기 위해 친환경 수저 \"SSAC\"을 개발,\n판매 예정에 있습니다.",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 23 * widthRatio,
+                      fontSize: 25 * widthRatio,
                     ),
                   ),
                 ),
@@ -131,13 +129,13 @@ class AboutUs extends StatelessWidget {
                   color: Colors.black,
                 ),
                 SizedBox(
-                  width: 490 * widthRatio,
+                  width: 550 * widthRatio,
                   child: Text(
                     "Team319는 앞으로도 한 사람 한 사람의\n지속 가능한 생활을 위해\n노력할 것입니다.\n\nTeam319는 친환경 사회로의 변화를 주도하는 기업,\n지속 가능한 생활을 주도하는 기업이 되어\n새로운 사회의 평범한 생활을 디자인해 나가겠습니다.",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 23 * widthRatio,
+                      fontSize: 25 * widthRatio,
                     ),
                   ),
                 ),
@@ -151,7 +149,7 @@ class AboutUs extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              width: 500 * widthRatio,
+              width: 550 * widthRatio,
               height: 90,
               decoration: BoxDecoration(
                 color: Colors.black,
@@ -202,9 +200,7 @@ class MemberInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heightRatio = MediaQuery.of(context).size.height / 1080;
     double widthRatio = MediaQuery.of(context).size.width / 1920;
-    bool isLandscape = widthRatio > heightRatio;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
