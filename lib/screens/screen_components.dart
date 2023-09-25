@@ -46,7 +46,7 @@ Container menuBar(BuildContext context, fontweight1, fontweight2, fontweight3) {
         ),
         TextButton(
           onPressed: () {
-            Get.to(AboutUs());
+            Get.to(const AboutUs());
           },
           child: Text(
             "About Us",
