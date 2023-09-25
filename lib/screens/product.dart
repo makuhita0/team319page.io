@@ -16,36 +16,40 @@ class Product extends StatelessWidget {
             title(context),
             menuBar(context, FontWeight.w100, FontWeight.w200, FontWeight.w100),
             banner("Product", "Team319의 친환경 제품을 살펴보세요"),
-            Container(
-              height: 230,
-              width: 210,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black26),
-                color: const Color.fromARGB(255, 241, 241, 241),
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: 160,
-                    child: Image.network(
-                      eximage,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  const Text(
-                    "SSAC",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            productInfo(eximage),
           ],
         ),
+      ),
+    );
+  }
+
+  Container productInfo(String image) {
+    return Container(
+      height: 230,
+      width: 210,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black26),
+        color: const Color.fromARGB(255, 241, 241, 241),
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            width: 160,
+            child: Image.network(
+              image,
+              fit: BoxFit.cover,
+            ),
+          ),
+          const Text(
+            "SSAC",
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ],
       ),
     );
   }
