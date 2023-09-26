@@ -272,6 +272,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Image.network(ourstorypict),
           ),
         ),
+        const SizedBox(
+          height: 30,
+        ),
         FilledButton(
           onPressed: () {
             Get.to(const AboutUs());
