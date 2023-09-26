@@ -32,7 +32,7 @@ Container title(BuildContext context) {
   );
 }
 
-Container menuBar(BuildContext context, fontweight1, fontweight2, fontweight3) {
+Container menuBar(BuildContext context, fw1, fw2, fw3) {
   return Container(
     height: 40,
     decoration: const BoxDecoration(
@@ -48,12 +48,12 @@ Container menuBar(BuildContext context, fontweight1, fontweight2, fontweight3) {
           onPressed: () {
             Get.to(const AboutUs());
           },
-          child: Text(
+          child: const Text(
             "About Us",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fontweight1,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),
@@ -61,12 +61,12 @@ Container menuBar(BuildContext context, fontweight1, fontweight2, fontweight3) {
           onPressed: () {
             Get.to(const Product());
           },
-          child: Text(
+          child: const Text(
             "Product",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fontweight2,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),
@@ -74,12 +74,12 @@ Container menuBar(BuildContext context, fontweight1, fontweight2, fontweight3) {
           onPressed: () {
             Get.to(const Mission());
           },
-          child: Text(
+          child: const Text(
             "Our Mission",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fontweight3,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),

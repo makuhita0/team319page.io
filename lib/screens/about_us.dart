@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:team319website/screens/screen_components.dart';
 
@@ -124,7 +122,7 @@ class AboutUs extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 300,
+                  height: 300 * widthRatio,
                   width: 1.0,
                   color: Colors.black,
                 ),
