@@ -16,7 +16,7 @@ Container title(BuildContext context) {
       children: [
         TextButton(
           onPressed: () {
-            Get.to(HomeScreen());
+            Get.to(const HomeScreen());
           },
           child: const Text(
             "Team319",
@@ -48,12 +48,12 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
           onPressed: () {
             Get.to(const AboutUs());
           },
-          child: const Text(
+          child: Text(
             "About Us",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: FontWeight.w400,
+              fontWeight: fw1,
             ),
           ),
         ),
@@ -61,12 +61,12 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
           onPressed: () {
             Get.to(const Product());
           },
-          child: const Text(
+          child: Text(
             "Product",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: FontWeight.w400,
+              fontWeight: fw2,
             ),
           ),
         ),
@@ -74,12 +74,12 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
           onPressed: () {
             Get.to(const Mission());
           },
-          child: const Text(
+          child: Text(
             "Our Mission",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: FontWeight.w400,
+              fontWeight: fw3,
             ),
           ),
         ),
