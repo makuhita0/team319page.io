@@ -7,6 +7,8 @@ import 'package:team319website/screens/screen_components.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  final String ourstorypict =
+      "https://images.unsplash.com/photo-1529367397865-4014c2fd41b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80";
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -59,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           TextButton(
             onPressed: () {
-              Get.to(AboutUs());
+              Get.to(const AboutUs());
             },
             onHover: (hover) {},
             child: const Text(
@@ -234,21 +236,53 @@ class _HomeScreenState extends State<HomeScreen> {
               fontSize: 15,
             ),
           ),
-        )
+        ),
       ],
     );
   }
 
   Column ourStory() {
-    return const Column(
+    double widthRatio = MediaQuery.of(context).size.width / 1920;
+    const String ourstorypict =
+        "https://images.unsplash.com/photo-1529367397865-4014c2fd41b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80";
+    return Column(
       children: [
-        Text(
+        const Text(
           "Our Story",
           style: TextStyle(
             fontSize: 56,
             fontWeight: FontWeight.w700,
           ),
-        )
+        ),
+        const Text(
+          "Team319는 2023년에 시작한 친환경 제품 스타트업입니다.\n친환경 수저 \"SSAC\"을 개발, 판매 예정입니다.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: SizedBox(
+            width: 500 * widthRatio,
+            child: Image.network(ourstorypict),
+          ),
+        ),
+        FilledButton(
+          onPressed: () {
+            Get.to(const AboutUs());
+          },
+          child: const Text(
+            "더 알아보기 →",
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -77,7 +77,7 @@ class AboutUs extends StatelessWidget {
                     width: 500 * widthRatio,
                     child: Image.network(forest),
                   ),
-                )
+                ),
               ],
             ),
             const SizedBox(

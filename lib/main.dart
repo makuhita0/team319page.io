@@ -18,7 +18,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: "Pretendard"),
-      home: const Scaffold(
+      home: Scaffold(
         body: HomeScreen(),
       ),
     );

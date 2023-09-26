@@ -16,7 +16,7 @@ Container title(BuildContext context) {
       children: [
         TextButton(
           onPressed: () {
-            Get.to(const HomeScreen());
+            Get.to(HomeScreen());
           },
           child: const Text(
             "Team319",
