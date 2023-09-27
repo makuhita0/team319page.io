@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Get.to(const Mission());
             },
             child: const Text(
-              "Our Mission",
+              "Mission",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
