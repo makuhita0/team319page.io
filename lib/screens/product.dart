@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:team319website/screens/screen_components.dart';
+import 'package:team319website/screens/ssac_detail.dart';
 
 class Product extends StatelessWidget {
   const Product({super.key});
@@ -23,33 +25,38 @@ class Product extends StatelessWidget {
     );
   }
 
-  Container productInfo(String image) {
-    return Container(
-      height: 230,
-      width: 210,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.black26),
-        color: const Color.fromARGB(255, 241, 241, 241),
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            width: 160,
-            child: Image.network(
-              image,
-              fit: BoxFit.cover,
+  InkWell productInfo(String image) {
+    return InkWell(
+      onTap: () {
+        Get.to(const SsacDetail());
+      },
+      child: Container(
+        height: 230,
+        width: 210,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black26),
+          color: const Color.fromARGB(255, 241, 241, 241),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: 160,
+              child: Image.network(
+                image,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          const Text(
-            "SSAC",
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w300,
+            const Text(
+              "SSAC",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

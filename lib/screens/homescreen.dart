@@ -136,6 +136,19 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Column briefProductIntroduce() {
+    double contwid = 0;
+    double contfs = 0;
+    double widthRatio = MediaQuery.of(context).size.width / 1920;
+    if (800 * widthRatio >= 350) {
+      contwid = 350;
+    } else {
+      contwid = 800 * widthRatio;
+    }
+    if (70 * widthRatio >= 50) {
+      contfs = 50;
+    } else {
+      contfs = 70 * widthRatio;
+    }
     return Column(
       children: [
         const Text(
@@ -170,33 +183,30 @@ class _HomeScreenState extends State<HomeScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              width: 200,
-            ),
             Column(
               children: [
                 const SizedBox(height: 100),
                 Container(
                   height: 300,
-                  width: 350,
+                  width: contwid,
                   decoration: BoxDecoration(
                     color: Colors.black12,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: const Text(
+                  child: Text(
                     "Hello, World!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 50,
+                      fontSize: contfs,
                     ),
                   ),
                 ),
               ],
             ),
-            const Column(
+            Column(
               children: [
                 SizedBox(
-                  width: 15,
+                  width: 15 * widthRatio,
                 ),
               ],
             ),
@@ -204,22 +214,19 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   height: 300,
-                  width: 350,
+                  width: contwid,
                   decoration: BoxDecoration(
                       color: Colors.black12,
                       borderRadius: BorderRadius.circular(30)),
-                  child: const Text(
+                  child: Text(
                     "He11o, W0r1d!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 50,
+                      fontSize: contfs,
                     ),
                   ),
                 ),
               ],
-            ),
-            const SizedBox(
-              width: 200,
             ),
           ],
         ),
