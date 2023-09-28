@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (70 * widthRatio >= 50) {
       contfs = 50;
     } else {
-      contfs = 70 * widthRatio;
+      contfs = 90 * widthRatio;
     }
     return Column(
       children: [
