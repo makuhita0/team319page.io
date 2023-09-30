@@ -14,19 +14,27 @@ class Mission extends StatelessWidget {
             title(context),
             menuBar(context, FontWeight.w100, FontWeight.w100, FontWeight.w200),
             banner("Our Mission", "Team319가 그리는 미래"),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Text(
-                "Team319는,\n그 뭐냐,\n그 뭐더라,\n아 진짜 뭐였지,\n뭐 그런 일 합니다.",
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.w800,
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "자연,",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.green,
+                  ),
                 ),
-              ),
-            ),
+                Text(
+                  "다음 세대에도\n그 다음 세대에도\n이어져야 하니까.",
+                  style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
