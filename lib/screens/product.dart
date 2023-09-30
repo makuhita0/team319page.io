@@ -28,7 +28,7 @@ class Product extends StatelessWidget {
   InkWell productInfo(String image) {
     return InkWell(
       onTap: () {
-        Get.to(const SsacDetail());
+        Get.to(const SSACDetail());
       },
       child: Container(
         height: 230,
