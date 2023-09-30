@@ -32,7 +32,7 @@ Container title(BuildContext context) {
   );
 }
 
-Container menuBar(BuildContext context, fw1, fw2, fw3) {
+Container menuBar(BuildContext context, aboutusfw, productfw, missionfw) {
   return Container(
     height: 40,
     decoration: const BoxDecoration(
@@ -53,7 +53,7 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fw1,
+              fontWeight: aboutusfw,
             ),
           ),
         ),
@@ -66,7 +66,7 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fw2,
+              fontWeight: productfw,
             ),
           ),
         ),
@@ -79,7 +79,7 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
-              fontWeight: fw3,
+              fontWeight: missionfw,
             ),
           ),
         ),
