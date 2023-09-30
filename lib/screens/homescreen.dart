@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 10,
         ),
         Text(
-          "환경으로 환경 문제를 해결하다!",
+          "환경 문제, 환경에서 답을 찾다",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 32,
@@ -261,22 +261,22 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.w700,
           ),
         ),
-        const Text(
-          "Team319는 2023년에 시작한 친환경 제품 스타트업입니다.\n친환경 수저 \"SSAC\"을 개발, 판매 예정입니다.",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 17,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: SizedBox(
             width: 500 * widthRatio,
             child: Image.network(ourstorypict),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Text(
+          "자연 친화적인 내일을 그리는 Team319입니다\n친환경 수저 \"SSAC\"을 개발, 판매 예정입니다",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w500,
           ),
         ),
         const SizedBox(
