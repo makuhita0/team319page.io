@@ -94,9 +94,6 @@ Container menuBar(BuildContext context, fw1, fw2, fw3) {
 Column banner(String name, String msge) {
   return Column(
     children: [
-      const SizedBox(
-        height: 10,
-      ),
       Container(
         height: 100,
         decoration: const BoxDecoration(color: Colors.black12),
